@@ -1,12 +1,9 @@
 # 🚀 QUICK START GUIDE
 
-## Complete Bookstore Management System - Get Started in 2 Minutes!
+## Complete Bookstore Management System 
 
 ---
-
-## ✅ You Have Successfully Created a 2-File System!
-
-### 📁 Your Files
+### 📁  Files
 
 ```
 ✅ bookstore_system.py    (43 KB) - Complete integrated system
