@@ -910,7 +910,6 @@ class BookstoreModel(Model):
         print("="*60)
         
         start_time = time.time()
-        
         for step in range(steps):
             if self.verbose and (step % 25 == 0 or step < 3):
                 print(f"\n📅 Step {step + 1}/{steps}:")
@@ -980,7 +979,6 @@ class BookstoreModel(Model):
         print(f"  ✅ Data Collection: {len(self.datacollector.model_vars)} metrics tracked")
         
         print(f"\n🎉 ALL COMPONENTS INTEGRATED SUCCESSFULLY!")
-
 
 # =====================================
 # MAIN EXECUTION
