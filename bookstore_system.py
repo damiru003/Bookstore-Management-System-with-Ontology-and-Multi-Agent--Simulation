@@ -8,8 +8,6 @@ This system combines:
 - SWRL Rules for business logic and automated inference
 - Message Bus for inter-agent communication
 - Complete simulation engine with statistics and reporting
-
-
 """
 
 import os
