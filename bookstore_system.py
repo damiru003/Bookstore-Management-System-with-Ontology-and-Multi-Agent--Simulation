@@ -413,7 +413,7 @@ class BookstoreOntology:
                     
     def get_swrl_inference_results(self):
         """Get SWRL classification results"""
-        return {
+        results = {
             'premium_customers': len(list(self.PremiumCustomer.instances())),
             'low_budget_customers': len(list(self.LowBudgetCustomer.instances())),
             'high_value_books': len(list(self.HighValueBook.instances())),
@@ -423,6 +423,9 @@ class BookstoreOntology:
             'discount_eligible': len(list(self.EligibleForDiscount.instances())),
             'restock_required': len(list(self.RequiresRestock.instances()))
         }
+        # Calculate total
+        results['total_classifications'] = sum(results.values())
+        return results
         
     def save_ontology(self, filename=None):
         """Save ontology to file"""

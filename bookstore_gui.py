@@ -1162,8 +1162,12 @@ Ready for simulation! Click 'Start Simulation' to begin.
         
         # Update SWRL classifications
         swrl_results = self.simulation.ontology.get_swrl_inference_results()
-        swrl_total = sum(swrl_results.values())
+        swrl_total = swrl_results.get('total_classifications', 0)
         self.metric_labels["SWRL Classifications"].configure(text=str(swrl_total))
+        
+        # Update Active Customers
+        active_customers = swrl_results.get('active_customers', 0)
+        self.metric_labels["Active Customers"].configure(text=str(active_customers))
         
     def update_charts(self):
         """Update all charts"""
